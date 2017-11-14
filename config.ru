@@ -1,4 +1,9 @@
-require './app'
-require './light'
+require 'sinatra'
+require 'pusher'
 
-run Sinatra::Application
+require_relative './app'
+require_relative './light'
+require_relative './pusher'
+
+run ApplicationController
+use LightsController

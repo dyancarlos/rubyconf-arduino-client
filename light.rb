@@ -1,9 +1,9 @@
-require 'sinatra'
+class LightsController < ApplicationController
+  get '/on' do
+    Pusher.trigger('light', 'change-status', { status: "on" })
+  end
 
-get '/light/on' do
-  "On"
-end
-
-get '/light/off' do
-  "Off"
+  get '/off' do
+    Pusher.trigger('light', 'change-status', { status: "off" })
+  end
 end

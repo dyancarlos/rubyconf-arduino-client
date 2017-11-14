@@ -1,5 +1,5 @@
-require 'sinatra'
-
-get '/' do
-  "Hello World!"
+class ApplicationController < Sinatra::Base
+  get '/' do
+    "Hello World!"
+  end
 end
